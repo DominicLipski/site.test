@@ -1,0 +1,332 @@
+$main-color: #767676;
+
+@mixin transition($type) {
+  transition: $type .3s linear;
+}
+
+body {
+  font-size: 16px;
+  font-family: MyriadPro-Regular, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix {
+  &:before,&:after {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.header {
+  background: #dcdcdc;
+  color: $main-color;
+  padding: 65px 0;
+  &-logo {
+    @include transition(opacity);
+    &:hover {
+      opacity: 0.7;
+    }
+    &__img {
+      max-width: 100%;
+    }
+  }
+  &-contacts {
+    float: right;
+    font-size: 3.33em;
+    @media (max-width: 480px) {
+      font-size: 2em;
+    }
+    &__item {
+      display: block;
+      color: $main-color;
+      text-decoration: none;
+      @include transition(opacity);
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.main {
+  &-title {
+    color: #9da3d7;
+    font-family: MyriadPro-Semibold, serif;
+    font-size: 2em;
+    margin-bottom: 19px;
+    text-align: center;
+  }
+  &-slider {
+    margin-bottom: 70px;
+    &__item {
+      padding: 16px 0;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+    }
+    &__img {
+      border: 8px solid #fff;
+      box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.17);
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    &__pagination {
+      width: 100%;
+      padding: 0;
+      margin: 6px 0 0;
+      list-style: none;
+      text-align: center;
+      li {
+        position: relative;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+        button {
+          font-size: 0;
+          line-height: 0;
+          display: block;
+          width: 35px;
+          height: 35px;
+          cursor: pointer;
+          color: transparent;
+          border: 0;
+          outline: none;
+          background: url(../images/main-slider__paggination.png) no-repeat;
+          @include transition(background);
+          &:hover,&:focus,&:active {
+            background: url(../images/main-slider__paggination-active.png) no-repeat;
+          }
+        }
+        &.slick-active button {
+          background: url(../images/main-slider__paggination-active.png) no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  min-height: 509px;
+  &__background {
+    background: url("../images/form__background.png") 50% 50% no-repeat;
+    background-size: cover;
+    margin: 0 0 45px;
+  }
+  &-phone {
+    max-width: 358px;
+    margin: 73px 65px;
+    @media (max-width: 480px) {
+      margin: 50px 0;
+      max-width: 100%;
+    }
+    &__description {
+      color: #ffffff;
+      font-size: 1.5em;
+      margin: 0 0 27px;
+      text-align: center;
+    }
+    &__container {
+      background: #9da3d7;
+      max-width: 100%;
+      padding: 30px 23px 50px;
+    }
+    &__input {
+      color: $main-color;
+      font-size: 1.5em;
+      line-height: 49px;
+      margin: 0 0 23px;
+      padding: 0 17px;
+      width: 100%;
+    }
+    &__btn {
+      background: #ffc087;
+      border: none;
+      color: #000000;
+      cursor: pointer;
+      display: block;
+      font-size: 1.5em;
+      line-height: 49px;
+      text-align: center;
+      width: 100%;
+      @include transition(opacity);
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    &__popup {
+      color: $main-color;
+      display: none;
+      font-size: 1.5em;
+      padding: 50px 100px;
+    }
+  }
+}
+
+.fancybox-close-small {
+  &:focus:after {
+    outline: none;
+  }
+}
+
+.calculator {
+  &-tabs {
+    list-style: none;
+    padding: 0;
+    &__item {
+      float: left;
+      height: 100%;
+      text-align: center;
+      width: 20%;
+      & img {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    }
+    &__link {
+      color: #000000;
+      font-family: MyriadPro-Bold, serif;
+      &:hover {
+        color: #0099DE;
+        text-decoration: underline;
+      }
+    }
+  }
+  &-content {
+    border-radius: 8px;
+    box-shadow: 2.5px 4.33px 10px 0 rgba(0, 0, 0, 0.23),inset 1px 1.732px 6px 0 rgba(0, 0, 0, 0.35);
+    margin: 0 7px 100px;
+    padding: 35px 25px;
+  }
+  &-pane {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &-window {
+    &__text {
+      display: inline-block;
+      &-to-up {
+        transform: rotate(-90deg);
+      }
+    }
+    &__img {
+    }
+  }
+  &__title {
+    color: #0099de;
+    font-family: MyriadPro-Semibold, serif;
+    font-size: 2.5em;
+    margin: 0 0 53px;
+    &-action {
+      font-family: MyriadPro-Semibold, serif;
+      font-size: 1.5em;
+      margin: 0 0 25px;
+    }
+  }
+  &-criterion {
+    margin: 0 0 60px;
+    &__radio {
+      display: none;
+      &:checked+.calculator-criterion__label:before {
+        content: "\2022";
+        color: #c1c1c1;
+        font-size: 3.33em;
+        text-align: center;
+        line-height: 7px;
+      }
+    }
+    &__label {
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      padding-left: 30px;
+      margin-right: 15px;
+      &:before {
+        content: "";
+        display: inline-block;
+        border: 2px solid #979797;
+        border-radius: 50%;
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+  &-dropdown {
+    position: relative;
+    max-width: 358px;
+    &__link {
+      background: url("../images/caret.png") 96% 12px no-repeat;
+      border: 2px solid #aeaeae;
+      border-radius: 10px;
+      color: #000000;
+      display: block;
+      line-height: 41px;
+      padding: 0 25px;
+    }
+    &-menu {
+      background: #fff;
+      border: 2px solid #aeaeae;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      box-sizing: border-box;
+      display: none;
+      list-style-type: none;
+      position: absolute;
+      padding: 10px 0 5px;
+      top: 27px;
+      width: 100%;
+      z-index: 999;
+      &__item {
+        cursor: pointer;
+        padding: 0 10px 5px;
+        &:hover {
+          background-color: #aeaeae;
+        }
+      }
+    }
+  }
+}
+
+.open {
+  & .calculator-dropdown-menu {
+    display: block;
+  }
+  & .calculator-dropdown__link {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.footer {
+  background: #777777;
+  padding: 55px 0 45px;
+  &-text {
+    color: #ffffff;
+    font-size: 1.5em;
+  }
+}
+
+

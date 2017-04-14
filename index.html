@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <base href="./">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container clearfix">
+            <a href="#" class="header-logo"><img src="images/header-logo.png" class="header-logo__img" alt=""></a>
+            <div class="header-contacts">
+                <a href="tel:+74997777777" class="header-contacts__item">+7(499) 777-77-77</a>
+                <a href="tel:+74997777777" class="header-contacts__item">+7(499) 777-77-77</a>
+            </div>
+        </div>
+    </header>
+    <div class="form__background">
+        <div class="container clearfix">
+            <div class="form-phone">
+                <div class="main-title">ФОРМА С КНОПКОЙ</div>
+                <form action="" class="form-phone__container">
+                    <div class="form-phone__description">ОСТАВЬ ТЕЛЕФОН И ПОЛУЧИ ЧТО-ТО ОФИГЕННОЕ</div>
+                    <input type="text" placeholder="Введите номер" class="form-phone__input">
+                    <button class="form-phone__btn" href="#form-phone__popup">ПОЛУЧИТЬ</button>
+                    <div class="form-phone__popup" id="form-phone__popup">
+                        Сообщение отправлено
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="main-title">ТУТ У НАС СЛАЙДЕР</div>
+    <div class="main-slider">
+        <div class="main-slider__item">
+            <img src="images/main-slider__item1.png" alt="" class="main-slider__img">
+        </div>
+        <div class="main-slider__item">
+            <img src="images/main-slider__item2.png" alt="" class="main-slider__img">
+        </div>
+        <div class="main-slider__item">
+            <img src="images/main-slider__item3.png" alt="" class="main-slider__img">
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-title">ПРОСТО ТЕКСТОВЫЙ БЛОК</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuere quis arcu sit amet commodo. Nullam ac dui lacus. Nulla dapibus interdum interdum. Curabitur ut diam nisl. Vivamus libero lacus, viverra at dolor sit amet, commodo faucibus orci. Vivamus laoreet ornare nisi, id pharetra tellus ullamcorper volutpat. Sed lacinia placerat accumsan. Praesent pharetra ipsum scelerisque, sodales urna ut, placerat nulla. Duis nunc urna, semper non arcu ut, sagittis dapibus lorem. Nunc nec urna id velit sodales sodales. Sed porttitor quam eget mollis consequat. Curabitur aliquet nec dui eget aliquet. Nulla in risus ante.</p>
+        <div class="main-title">КАЛЬКУЛЯТОР</br>(СТОИМОСТЬ ПОЛЬЗОВАТЕЛЬ УЗНАЕТ ПО ТЕЛЕФОНУ)</div>
+        <ul class="calculator-tabs clearfix">
+            <li class="calculator-tabs__item active">
+                <a href="#single-wing" data-toggle="tab" class="calculator-tabs__link"><img src="images/single-wing.png" alt="">Одностворчатое</a>
+            </li>
+            <li class="calculator-tabs__item">
+                <a href="#two-leaved" data-toggle="tab" class="calculator-tabs__link"><img src="images/two-leaved.png" alt="">Двухстворчатое</a>
+            </li>
+            <li class="calculator-tabs__item">
+                <a href="#three-leaved" data-toggle="tab" class="calculator-tabs__link"><img src="images/three-leaved.png" alt="">Трёхстворчатое</a>
+            </li>
+            <li class="calculator-tabs__item">
+                <a href="#balcony-block" data-toggle="tab" class="calculator-tabs__link"><img src="images/balcony-block.png" alt="">Балконный блок</a>
+            </li>
+            <li class="calculator-tabs__item">
+                <a href="#balcony-glazing" data-toggle="tab" class="calculator-tabs__link"><img src="images/balcony-glazing.png" alt="">Остакление балкона</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="calculator-content">
+            <div class="calculator-pane active" id="single-wing">
+                <div class="calculator__title">Одностворчатое окно KBE</div>
+                <div class="calculator__title-action">1. Критерий выбора</div>
+                <div class="calculator-criterion">
+                    <input id="criterion1" type="radio" name="calculator-criterion" value="criterion1" class="calculator-criterion__radio">
+                    <label for="criterion1" class="calculator-criterion__label">пункт выбора 1</label>
+                    <input id="criterion2" type="radio" name="calculator-criterion" value="criterion2" class="calculator-criterion__radio">
+                    <label for="criterion2" class="calculator-criterion__label">пункт выбора 2</label>
+                    <input id="criterion3" type="radio" name="calculator-criterion" value="criterion3" class="calculator-criterion__radio">
+                    <label for="criterion3" class="calculator-criterion__label">пункт выбора 3</label>
+                </div>
+                <div class="calculator__title-action">2. Выберите открывание створки</div>
+                <div class="calculator-dropdown">
+                    <a class="calculator-dropdown__link" role="button" data-toggle="dropdown" data-target="#" href="#">Не открывается</a>
+                    <ul class="calculator-dropdown-menu" role="menu">
+                        <li class="calculator-dropdown-menu__item">1</li>
+                        <li class="calculator-dropdown-menu__item">2</li>
+                        <li class="calculator-dropdown-menu__item">3</li>
+                    </ul>
+                </div>
+                <!--<div class="calculator-window">
+                    <div class="calculator-window__text">ширина</div>
+                    <div class="calculator-window__text calculator-window__text-to-up"><p>высота</p></div>
+                    <div class="calculator-window__img"><img src="images/single-wing.png"></div>
+                </div>-->
+            </div>
+            <div class="calculator-pane" id="two-leaved">2</div>
+            <div class="calculator-pane" id="three-leaved">.3..</div>
+            <div class="calculator-pane" id="balcony-block">4</div>
+            <div class="calculator-pane" id="balcony-glazing">4</div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-text">просто</div>
+            <div class="footer-text">скромный футер</div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="js/tab.js"></script>
+    <script type="text/javascript" src="js/dropdown.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
